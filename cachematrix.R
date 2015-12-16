@@ -44,7 +44,8 @@ cacheSolve <- function(x, ...) {
         }
         
         #//If the inverse has not been calculated yet, we calculate it and save it in the cache using "setinverse()"
-        inverse <- solve(x$get(),...)
+        mat <- x$get()
+        inverse <- solve(mat)
         x$setinverse(inverse)
         inverse
 }
